@@ -6,7 +6,7 @@ services:
 before_install:
   - docker build -t paulpatena/docker-react -f Dockerfile.dev .   # tag it to easily access img
 
-scripts:
+script:
   - docker run -e CI=true paulpatena/docker-react npm run test
 
 deploy:
